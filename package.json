@@ -8,7 +8,8 @@
     "build": "webpack -p --mode production&&cp  -pR ./public/* ./dist",
     "lint": "tslint -p tsconfig.json -c tslint.json 'src/**/*.ts{,x}'",
     "lint:fix": "tslint -p tsconfig.json -c tslint.json 'src/**/*.ts{,x}' --fix",
-    "loc": "sloc --format cli-table ./src"
+    "loc": "sloc --format cli-table ./src",
+    "deploy": "npm run build&&gh-pages -d dist"
   },
   "author": "",
   "license": "AGPL-3.0",
@@ -23,6 +24,7 @@
     "@types/react-router": "^4.0.19",
     "@types/react-router-dom": "^4.2.3",
     "css-loader": "^0.28.10",
+    "gh-pages": "^1.1.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
     "sloc": "^0.2.0",
